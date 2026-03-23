@@ -55,7 +55,7 @@ func TestInteropProcedureValid(t *testing.T) {
 			t.Fatal(err)
 		}
 
-		assert.NoError(ValidateProcedure(&cat, body, params, "example.lexicon.procedure", 0))
+		assert.NoError(ValidateProcedure(cat, body, params, "example.lexicon.procedure", 0))
 	}
 }
 
@@ -94,7 +94,7 @@ func TestInteropProcedureInvalid(t *testing.T) {
 			t.Fatal(err)
 		}
 
-		err = ValidateProcedure(&cat, body, params, "example.lexicon.procedure", 0)
+		err = ValidateProcedure(cat, body, params, "example.lexicon.procedure", 0)
 		if err == nil {
 			fmt.Println("   FAIL")
 		}

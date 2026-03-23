@@ -47,7 +47,7 @@ func TestInteropQueryValid(t *testing.T) {
 			t.Fatal(err)
 		}
 
-		assert.NoError(ValidateQuery(&cat, params, "example.lexicon.query", 0))
+		assert.NoError(ValidateQuery(cat, params, "example.lexicon.query", 0))
 	}
 }
 
@@ -82,7 +82,7 @@ func TestInteropQueryInvalid(t *testing.T) {
 			t.Fatal(err)
 		}
 
-		err = ValidateQuery(&cat, params, "example.lexicon.query", 0)
+		err = ValidateQuery(cat, params, "example.lexicon.query", 0)
 		if err == nil {
 			fmt.Println("   FAIL")
 		}
